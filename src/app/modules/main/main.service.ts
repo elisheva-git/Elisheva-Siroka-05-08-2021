@@ -7,7 +7,7 @@ import { flatMap } from 'rxjs/operators';
 import { ErrorMessageComponent } from '../other/error-message/error-message.component';
 import { MatDialog } from '@angular/material/dialog';
 
-const API_KEY:string="HOXo0AOzySptQ1ARA6acEflCJKWaeRGo"
+const API_KEY:string="fYjUllw0TG3AlyYvPuAhV1fYBBnPx3UX"
 @Injectable()
 export class MainService {
 

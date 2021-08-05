@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
       if (data.has("key")) {
         this.initializeScreenWithParameters(data.get("key")||undefined, data.get("name")||undefined)
       }
+      //get the position
       else {
         navigator.geolocation.getCurrentPosition((position) => {
           this._service.getGeoposition(position.coords.latitude, position.coords.longitude).subscribe(data => {
@@ -83,6 +84,7 @@ export class HomeComponent implements OnInit {
       this._service.openDialogError("Oops, fault please try again")
     })
   }
+  
   //add to favorites or remove from favorite
   addOrDeleteFavorites() {
     let currentCityFavorite = new FavoriteCityWeather(this.currentCity.name, this.currentCity.key)
